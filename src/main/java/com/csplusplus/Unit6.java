@@ -30,9 +30,9 @@ public class Unit6 {
     // Instructions: Create a new array of the same size, and fill it with elements from the original array in reverse order.
     public static int[] reverseArray(int[] array) {
         // TODO: Implement this method
-        int reversedOrder;
+        int[] reversedOrder = new int[array.length];
         for (int i = array.length - 1; i >= 0; i--) {
-            reversedOrder+= i;
+            reversedOrder[i] = array[array.length - 1 - i];
         }
         return reversedOrder;  // Placeholder return value, replace with the reversed array.
     }
@@ -54,7 +54,7 @@ public class Unit6 {
     public static int countOccurrences(int[] array, int number) {
         int count = 0;
         for (int value : array) {
-            if (value = number) {
+            if (value == number) {
                 count ++;
             }
         }
